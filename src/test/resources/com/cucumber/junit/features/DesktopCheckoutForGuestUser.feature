@@ -3,15 +3,16 @@ Feature: As a user I want to get ability to create order
   @regression
   Scenario: Proceed to checkout, final review and place order as guest user
     Given I open the Initial Home Page
-    And I click on advanced btn
-    And I click on proceed link
-    And I search for "DSC WX"
+    When I search for "DSC WX"
     And I am redirected to a "search" results page
     And Search results contain the following products
       | LI-ION F SERIES G |
       | DCS-WX1           |
       | DCS-N1            |
     And I apply the following search filters
+      |Price|$500-$999|
+      |Megapixels|10 - 10.9|
+      |Brand|Canon|
     And Search results contain only the following products
       | EOS 40D BODY |
     And I click Add to cart button for product with name EOS 40D BODY

@@ -5,8 +5,9 @@ import org.openqa.selenium.support.ui.Select;
 
 import static com.cucumber.junit.driver.DriverManager.getDriver;
 
+
 public class SelectManager {
-    public static Select newSelect(By by) {
-        return new Select(getDriver().findElement(by));
-    }
+	public static Select newSelect(By by) {
+		return new Select(getDriver().findElement(by));
+	}
 }

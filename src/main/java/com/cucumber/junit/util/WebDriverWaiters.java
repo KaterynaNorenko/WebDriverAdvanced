@@ -6,12 +6,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static com.cucumber.junit.driver.DriverManager.getDriver;
 
-public class WebDriverWaiters {
-    public void waitUntilBtnClickable(By locator) {
-        new WebDriverWait(getDriver(), 10).until(ExpectedConditions.elementToBeClickable(locator));
-    }
 
-    public void waitUntilElementVisible(By locator, long timeout) {
-        new WebDriverWait(getDriver(), timeout).until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
+public class WebDriverWaiters {
+	public void waitUntilElementClickable(By locator) {
+		new WebDriverWait(getDriver(), 15).until(ExpectedConditions.elementToBeClickable(locator));
+	}
+
+	public void waitUntilElementVisible(By locator, long timeout) {
+		new WebDriverWait(getDriver(), timeout).until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
 }

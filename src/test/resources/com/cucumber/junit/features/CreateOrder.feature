@@ -6,9 +6,7 @@ Feature: Desktop Checkout for Guest User
   @smoke
   Scenario: Order should contain appropriate totals
     Given the user opens Accelerator website
-    When the user clicks on advanced btn
-    And the user clicks on proceed link
-    And the user searches for a product with number "1934793"
+    When the user searches for a product with number "1934793"
     And the user adds item to order
     And the user clicks on checkout button
     And the user clicks on checkout button on cart page
