@@ -7,6 +7,7 @@ import java.util.Map;
 
 
 public class SearchResults extends BasePage {
+
 	private static final String SEARCH_RESULTS_PAGE_URL = "https://ecsc00a08ec4:9002/yacceleratorstorefront/electronics/en/search/?text={searchText}";
 	private static final By ADD_TO_ORDER_BTN = By.xpath("//form[@id='addToCartForm1934793']/descendant::button[@type='submit']");
 	private static final By CHECKOUT_BTN = By.xpath("//a[@href='/yacceleratorstorefront/electronics/en/cart' and @class='btn btn-primary btn-block add-to-cart-button']");
@@ -45,10 +46,10 @@ public class SearchResults extends BasePage {
 	}
 
 	public void applySearchFilters(Map<String, String> filterValues) {
-		findElementByDynamicXpath(SHOP_BY_PRICE_PATTERN, filterValues.get("Price"));
+		findElementByDynamicXpathAndClick(SHOP_BY_PRICE_PATTERN, filterValues.get("Price"));
 		waitForElementIsVisible(RESULTS);
-		findElementByDynamicXpath(SHOP_BY_MEGAPIXELS_PATTERN, filterValues.get("Megapixels"));
+		findElementByDynamicXpathAndClick(SHOP_BY_MEGAPIXELS_PATTERN, filterValues.get("Megapixels"));
 		waitForElementIsVisible(RESULTS);
-		findElementByDynamicXpath(SHOP_BY_BRAND_PATTERN, filterValues.get("Brand"));
+		findElementByDynamicXpathAndClick(SHOP_BY_BRAND_PATTERN, filterValues.get("Brand"));
 	}
 }

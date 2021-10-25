@@ -10,9 +10,9 @@ Feature: As a user I want to get ability to create order
       | DCS-WX1           |
       | DCS-N1            |
     And I apply the following search filters
-      |Price|$500-$999|
-      |Megapixels|10 - 10.9|
-      |Brand|Canon|
+      | Price      | $500-$999 |
+      | Megapixels | 10 - 10.9 |
+      | Brand      | Canon     |
     And Search results contain only the following products
       | EOS 40D BODY |
     And I click Add to cart button for product with name EOS 40D BODY

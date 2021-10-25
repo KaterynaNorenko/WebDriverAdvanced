@@ -46,19 +46,19 @@ public class BasePage extends WebDriverWaiters {
 		getDriver().findElement(by).click();
 	}
 
-	public void getElementSendKeys(By by, String value) {
+	public void setElementSendKeys(By by, String value) {
 		newAction().moveToElement(findElement(by)).click().sendKeys(value).perform();
 	}
 
-	public void getElementSendKeysEnter(By by, String value) {
+	public void setElementSendKeysEnter(By by, String value) {
 		newAction().moveToElement(findElement(by)).click().sendKeys(value).sendKeys(ENTER).perform();
 	}
 
-	public void getElementDoSelectByVisibleText(By by, String value) {
+	public void setElementDoSelectByVisibleText(By by, String value) {
 		newSelect(by).selectByVisibleText(value);
 	}
 
-	public String getElementGetText(By by) {
+	public String getElementText(By by) {
 		return getDriver().findElement(by).getText();
 	}
 
@@ -69,7 +69,7 @@ public class BasePage extends WebDriverWaiters {
 				.collect(Collectors.toList());
 	}
 
-	public void findElementByDynamicXpath(String xpath, String value) {
+	public void findElementByDynamicXpathAndClick(String xpath, String value) {
 		findElement(By.xpath(String.format(xpath, value))).click();
 	}
 }

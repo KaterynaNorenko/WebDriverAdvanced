@@ -6,6 +6,7 @@ import java.util.Map;
 
 
 public class CheckoutShipment extends BasePage {
+
 	private static final By ORDER_SUBTOTAL = By.cssSelector(".subtotal span");
 	private static final By ORDER_TOTAL = By.cssSelector(".totals span");
 	private static final By ORDER_TAX = By.cssSelector("div.tax > span");
@@ -47,23 +48,23 @@ public class CheckoutShipment extends BasePage {
 	private static final String CVV_TITLE = "CVV";
 
 	public String getOrderSubtotal() {
-		return getElementGetText(ORDER_SUBTOTAL);
+		return getElementText(ORDER_SUBTOTAL);
 	}
 
 	public String getOrderTotal() {
-		return getElementGetText(ORDER_TOTAL);
+		return getElementText(ORDER_TOTAL);
 	}
 
 	public String getOrderTax() {
-		return getElementGetText(ORDER_TAX);
+		return getElementText(ORDER_TAX);
 	}
 
 	public String getOrderDiscount() {
-		return getElementGetText(DISCOUNTS);
+		return getElementText(DISCOUNTS);
 	}
 
 	public void getCountryRegionDropDown(String country) {
-		getElementDoSelectByVisibleText(COUNTRY_REGION_DROPDOWN, country);
+		setElementDoSelectByVisibleText(COUNTRY_REGION_DROPDOWN, country);
 	}
 
 	public void getNextButtonShipment() {
@@ -71,67 +72,67 @@ public class CheckoutShipment extends BasePage {
 	}
 
 	public void getCardTypeDropDown(String cardType) {
-		getElementDoSelectByVisibleText(CARD_TYPE_DROPDOWN, cardType);
+		setElementDoSelectByVisibleText(CARD_TYPE_DROPDOWN, cardType);
 	}
 
 	public void getNameOnCard(String nameOnCard) {
-		getElementSendKeys(NAME_ON_CARD, nameOnCard);
+		setElementSendKeys(NAME_ON_CARD, nameOnCard);
 	}
 
 	public void getCardNumber(String cardNumber) {
-		getElementSendKeys(CARD_NUMBER, cardNumber);
+		setElementSendKeys(CARD_NUMBER, cardNumber);
 	}
 
 	public void getExpiryYearDropDown(String expiryYear) {
-		getElementDoSelectByVisibleText(EXPIRY_YEAR_DROPDOWN, expiryYear);
+		setElementDoSelectByVisibleText(EXPIRY_YEAR_DROPDOWN, expiryYear);
 	}
 
 	public void getExpiryMonthDropDown(String expiryMonth) {
-		getElementDoSelectByVisibleText(EXPIRY_MONTH_DROPDOWN, expiryMonth);
+		setElementDoSelectByVisibleText(EXPIRY_MONTH_DROPDOWN, expiryMonth);
 	}
 
 	public void getCvv(String cvv) {
-		getElementSendKeysEnter(CVV, cvv);
+		setElementSendKeysEnter(CVV, cvv);
 	}
 
 	public String getFirstNameErrorMessage() {
-		return getElementGetText(FIRST_NAME_ERROR_MESSAGE);
+		return getElementText(FIRST_NAME_ERROR_MESSAGE);
 	}
 
 	public String getLastNameErrorMessage() {
-		return getElementGetText(LAST_NAME_ERROR_MESSAGE);
+		return getElementText(LAST_NAME_ERROR_MESSAGE);
 	}
 
 	public String getAddressLine1ErrorMessage() {
-		return getElementGetText(ADDRESS_LINE1_ERROR_MESSAGE);
+		return getElementText(ADDRESS_LINE1_ERROR_MESSAGE);
 	}
 
 	public String getCityErrorMessage() {
-		return getElementGetText(CITY_ERROR_MESSAGE);
+		return getElementText(CITY_ERROR_MESSAGE);
 	}
 
 	public String getPostCodeErrorMessage() {
-		return getElementGetText(POST_CODE_ERROR_MESSAGE);
+		return getElementText(POST_CODE_ERROR_MESSAGE);
 	}
 
 	public void getFirstName(String firstName) {
-		getElementSendKeys(FIRST_NAME, firstName);
+		setElementSendKeys(FIRST_NAME, firstName);
 	}
 
 	public void getLastName(String lastName) {
-		getElementSendKeys(LAST_NAME, lastName);
+		setElementSendKeys(LAST_NAME, lastName);
 	}
 
 	public void getAddressLine1(String addressLine1) {
-		getElementSendKeys(ADDRESS_LINE1, addressLine1);
+		setElementSendKeys(ADDRESS_LINE1, addressLine1);
 	}
 
 	public void getCity(String city) {
-		getElementSendKeys(CITY, city);
+		setElementSendKeys(CITY, city);
 	}
 
 	public void getPostCode(String postCode) {
-		getElementSendKeys(POST_CODE, postCode);
+		setElementSendKeys(POST_CODE, postCode);
 	}
 
 	public String getOrderSubtotalTitle() {

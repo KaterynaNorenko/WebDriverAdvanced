@@ -8,6 +8,7 @@ import static com.cucumber.junit.driver.DriverManager.getDriver;
 
 
 public class WebDriverWaiters {
+
 	public void waitUntilElementClickable(By locator) {
 		new WebDriverWait(getDriver(), 15).until(ExpectedConditions.elementToBeClickable(locator));
 	}

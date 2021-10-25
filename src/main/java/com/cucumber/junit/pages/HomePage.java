@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 
 
 public class HomePage extends BasePage {
+
 	private static final String ACCELERATOR_URL = "https://ecsc00a08ec4:9002/yacceleratorstorefront/?site=electronics";
 	private static final By SEARCH_INPUT = By.xpath("//*[@id='js-site-search-input']");
 
@@ -15,6 +16,6 @@ public class HomePage extends BasePage {
 
 	public void getSearchInput(String productNumber) {
 		waitForElementIsClickable(SEARCH_INPUT);
-		getElementSendKeysEnter(SEARCH_INPUT, productNumber);
+		setElementSendKeysEnter(SEARCH_INPUT, productNumber);
 	}
 }

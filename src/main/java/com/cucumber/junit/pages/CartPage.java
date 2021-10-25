@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 
 public class CartPage extends BasePage {
+
 	private static final String CART_PAGE_URL = "https://ecsc00a08ec4:9002/yacceleratorstorefront/electronics/en/cart";
 	private static final By CHECKOUT_BTN_CART = By.xpath("//div[@class='cart__actions border']/descendant::button[@class='btn btn-primary btn-block btn--continue-checkout js-continue-checkout-button']");
 	private static final By CART_ORDER_TAX = By.xpath("//div[@class='cart-totals-taxes text-right']");
@@ -17,11 +18,11 @@ public class CartPage extends BasePage {
 	}
 
 	public String getCartOrderTax() {
-		return getElementGetText(CART_ORDER_TAX);
+		return getElementText(CART_ORDER_TAX);
 	}
 
 	public String getCartOrderTotal() {
-		return getElementGetText(CART_ORDER_TOTAL);
+		return getElementText(CART_ORDER_TOTAL);
 	}
 
 	public String getCartPageUrl() {
